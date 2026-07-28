@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Sénégal - Bots WhatsApp, Tunnels de Vente, E-commerce</title>
+    <meta name="description" content="Solutions digitales sur mesure pour les entreprises sénégalaises : Bots WhatsApp, Tunnels de vente, Sites e-commerce. Basé à Dakar.">
+    <meta name="keywords" content="bot WhatsApp Sénégal, tunnel de vente Dakar, e-commerce Sénégal, développement web Dakar">
+    <meta name="author" content="Digital Sénégal">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Digital Sénégal - Solutions Digitales">
+    <meta property="og:description" content="Bots WhatsApp, Tunnels de vente, Sites e-commerce - Solutions sur mesure pour les entreprises sénégalaises">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-site.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#667eea',
+                        secondary: '#f5576c',
+                        whatsapp: '#25D366',
+                        dark: '#1f2937',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-inter text-dark bg-white">
+
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#accueil" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <i class="fas fa-bolt text-white text-lg"></i>
+                </div>
+                <span class="font-poppins font-bold text-xl text-dark">Digital Sénégal</span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#accueil" class="nav-link font-medium text-dark hover:text-primary transition-colors">Accueil</a>
+                <a href="#services" class="nav-link font-medium text-dark hover:text-primary transition-colors">Services</a>
+                <a href="#realisations" class="nav-link font-medium text-dark hover:text-primary transition-colors">Réalisations</a>
+                <a href="#tarifs" class="nav-link font-medium text-dark hover:text-primary transition-colors">Tarifs</a>
+                <a href="#contact" class="nav-link font-medium text-dark hover:text-primary transition-colors">Contact</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#contact" class="hidden md:inline-block bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-primary/90 transition-all transform hover:scale-105">
+                Demander un devis
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-dark text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#accueil" class="nav-link font-medium text-dark hover:text-primary transition-colors">Accueil</a>
+                <a href="#services" class="nav-link font-medium text-dark hover:text-primary transition-colors">Services</a>
+                <a href="#realisations" class="nav-link font-medium text-dark hover:text-primary transition-colors">Réalisations</a>
+                <a href="#tarifs" class="nav-link font-medium text-dark hover:text-primary transition-colors">Tarifs</a>
+                <a href="#contact" class="nav-link font-medium text-dark hover:text-primary transition-colors">Contact</a>
+                <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-full font-semibold text-center hover:bg-primary/90 transition-all">
+                    Demander un devis
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="accueil" class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
+        <!-- Background decorations -->
+        <div class="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Texte -->
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-semibold mb-4">
+                        <i class="fas fa-rocket mr-1"></i> Solutions Digitales au Sénégal
+                    </div>
+                    <h1 class="font-poppins text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Transformez votre business avec le <span class="text-primary">digital</span>
+                    </h1>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        Bots WhatsApp, Tunnels de vente, Sites e-commerce — Solutions sur mesure pour les entreprises sénégalaises.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#realisations" class="bg-primary text-white px-8 py-4 rounded-full font-semibold text-center hover:bg-primary/90 transition-all transform hover:scale-105 shadow-lg shadow-primary/30">
+                            <i class="fas fa-eye mr-2"></i> Voir mes réalisations
+                        </a>
+                        <a href="https://wa.me/221XXXXXXXXX" target="_blank" class="bg-whatsapp text-white px-8 py-4 rounded-full font-semibold text-center hover:bg-whatsapp/90 transition-all transform hover:scale-105 shadow-lg shadow-whatsapp/30">
+                            <i class="fab fa-whatsapp mr-2"></i> Discuter sur WhatsApp
+                        </a>
+                    </div>
+                    <!-- Stats rapides -->
+                    <div class="flex flex-wrap gap-8 mt-12">
+                        <div>
+                            <div class="font-poppins text-3xl font-bold text-primary">10+</div>
+                            <div class="text-gray-500 text-sm">Projets réalisés</div>
+                        </div>
+                        <div>
+                            <div class="font-poppins text-3xl font-bold text-primary">100%</div>
+                            <div class="text-gray-500 text-sm">Clients satisfaits</div>
+                        </div>
+                        <div>
+                            <div class="font-poppins text-3xl font-bold text-primary">7j/7</div>
+                            <div class="text-gray-500 text-sm">Support réactif</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Illustration -->
+                <div class="hidden md:flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-gradient-to-br from-primary to-purple-600 rounded-3xl rotate-6 absolute"></div>
+                        <div class="w-80 h-80 bg-white rounded-3xl shadow-2xl flex flex-col items-center justify-center relative z-10 p-8">
+                            <i class="fab fa-whatsapp text-6xl text-whatsapp mb-4"></i>
+                            <i class="fas fa-shopping-cart text-4xl text-primary mb-2"></i>
+                            <i class="fas fa-filter text-3xl text-secondary"></i>
+                            <p class="text-center text-gray-600 mt-4 font-poppins font-semibold">Solutions Digitales</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION SERVICES ==================== -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold mb-4">Mes <span class="text-primary">Services</span></h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Des solutions digitales complètes pour votre entreprise</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Carte 1 : Bot WhatsApp -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 bg-whatsapp/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fab fa-whatsapp text-3xl text-whatsapp"></i>
+                    </div>
+                    <h3 class="font-poppins text-xl font-bold mb-3">Automatisation WhatsApp</h3>
+                    <p class="text-gray-600 mb-6">Bots intelligents pour prendre des RDV, envoyer des rappels, répondre aux FAQ. Idéal pour cliniques, salons, services.</p>
+
+                    <!-- Packs -->
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between items-center bg-gray-50 rounded-lg p-3">
+                            <span class="font-medium text-sm">Découverte</span>
+                            <span class="font-bold text-primary">75 000 FCFA</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-primary/5 border-2 border-primary rounded-lg p-3">
+                            <span class="font-medium text-sm">PRO <span class="text-xs bg-primary text-white px-2 py-0.5 rounded-full">⭐</span></span>
+                            <span class="font-bold text-primary">150 000 FCFA</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-gray-50 rounded-lg p-3">
+                            <span class="font-medium text-sm">PREMIUM</span>
+                            <span class="font-bold text-primary">350 000 FCFA</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="block text-center bg-whatsapp text-white py-3 rounded-full font-semibold hover:bg-whatsapp/90 transition-all">
+                        En savoir plus
+                    </a>
+                </div>
+
+                <!-- Carte 2 : Tunnels de Vente -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-3xl text-secondary"></i>
+                    </div>
+                    <h3 class="font-poppins text-xl font-bold mb-3">Tunnels de Vente</h3>
+                    <p class="text-gray-600 mb-6">Pages de vente optimisées pour convertir vos visiteurs en clients. Parfait pour vendre un produit spécifique ou capturer des leads.</p>
+
+                    <!-- Packs -->
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between items-center bg-gray-50 rounded-lg p-3">
+                            <span class="font-medium text-sm">LEAD</span>
+                            <span class="font-bold text-secondary">100 000 FCFA</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-secondary/5 border-2 border-secondary rounded-lg p-3">
+                            <span class="font-medium text-sm">VENTE DIRECTE <span class="text-xs bg-secondary text-white px-2 py-0.5 rounded-full">⭐</span></span>
+                            <span class="font-bold text-secondary">250 000 FCFA</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-gray-50 rounded-lg p-3">
+                            <span class="font-medium text-sm">AUTOMATIQUE</span>
+                            <span class="font-bold text-secondary">400 000 FCFA</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="block text-center bg-secondary text-white py-3 rounded-full font-semibold hover:bg-secondary/90 transition-all">
+                        En savoir plus
+                    </a>
+                </div>
+
+                <!-- Carte 3 : Sites E-commerce -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shopping-cart text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="font-poppins text-xl font-bold mb-3">Sites E-commerce</h3>
+                    <p class="text-gray-600 mb-6">Boutiques en ligne complètes avec panier, paiement Wave/Orange Money, gestion des stocks. Pour vendre 24h/24.</p>
+
+                    <!-- Packs -->
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between items-center bg-gray-50 rounded-lg p-3">
+                            <span class="font-medium text-sm">Vitrine & WhatsApp</span>
+                            <span class="font-bold text-primary">150 000 FCFA</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-primary/5 border-2 border-primary rounded-lg p-3">
+                            <span class="font-medium text-sm">Complète & Autonome <span class="text-xs bg-primary text-white px-2 py-0.5 rounded-full">⭐</span></span>
+                            <span class="font-bold text-primary">350 000 FCFA</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-gray-50 rounded-lg p-3">
+                            <span class="font-medium text-sm">Marque & Croissance</span>
+                            <span class="font-bold text-primary">600 000 FCFA</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="block text-center bg-primary text-white py-3 rounded-full font-semibold hover:bg-primary/90 transition-all">
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION OFFRES COMBINÉES (BUNDLES) ==================== -->
+    <section id="tarifs" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold mb-4">Offres <span class="text-primary">Spéciales</span> — Packs Combinés</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Économisez jusqu'à 200 000 FCFA avec nos bundles</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Bundle 1 : E-Commerce Booster -->
+                <div class="bg-white border-2 border-gray-100 rounded-2xl p-6 hover:border-primary hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative" data-aos="fade-up" data-aos-delay="0">
+                    <div class="absolute -top-3 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">Best-Seller</div>
+                    <div class="text-center mb-4">
+                        <span class="text-4xl">🚀</span>
+                        <h3 class="font-poppins text-lg font-bold mt-2">E-Commerce Booster</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm text-center mb-4">Site E-commerce Pack 2 + 1 Tunnel de Vente</p>
+                    <div class="text-center mb-4">
+                        <span class="text-gray-400 line-through text-lg">600 000 FCFA</span>
+                        <div class="font-poppins text-3xl font-bold text-primary">450 000 FCFA</div>
+                        <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mt-2">Économie : 150 000 FCFA</span>
+                    </div>
+                    <a href="#contact" class="block text-center bg-primary text-white py-3 rounded-full font-semibold hover:bg-primary/90 transition-all">
+                        Choisir ce pack
+                    </a>
+                </div>
+
+                <!-- Bundle 2 : Service 360° -->
+                <div class="bg-white border-2 border-gray-100 rounded-2xl p-6 hover:border-secondary hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-4">
+                        <span class="text-4xl">🏥</span>
+                        <h3 class="font-poppins text-lg font-bold mt-2">Service 360°</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm text-center mb-4">Tunnel RDV + Bot WhatsApp PRO</p>
+                    <div class="text-center mb-4">
+                        <span class="text-gray-400 line-through text-lg">250 000 FCFA</span>
+                        <div class="font-poppins text-3xl font-bold text-secondary">190 000 FCFA</div>
+                        <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mt-2">Économie : 60 000 FCFA</span>
+                    </div>
+                    <a href="#contact" class="block text-center bg-secondary text-white py-3 rounded-full font-semibold hover:bg-secondary/90 transition-all">
+                        Choisir ce pack
+                    </a>
+                </div>
+
+                <!-- Bundle 3 : Automation Totale -->
+                <div class="bg-white border-2 border-gray-100 rounded-2xl p-6 hover:border-purple-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-3 right-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Premium</div>
+                    <div class="text-center mb-4">
+                        <span class="text-4xl">👑</span>
+                        <h3 class="font-poppins text-lg font-bold mt-2">Automation Totale</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm text-center mb-4">Site E-commerce Pack 3 + Bot WhatsApp PREMIUM</p>
+                    <div class="text-center mb-4">
+                        <span class="text-gray-400 line-through text-lg">950 000 FCFA</span>
+                        <div class="font-poppins text-3xl font-bold text-purple-600">750 000 FCFA</div>
+                        <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mt-2">Économie : 200 000 FCFA</span>
+                    </div>
+                    <a href="#contact" class="block text-center bg-purple-600 text-white py-3 rounded-full font-semibold hover:bg-purple-700 transition-all">
+                        Choisir ce pack
+                    </a>
+                </div>
+
+                <!-- Bundle 4 : Démarrage Rapide -->
+                <div class="bg-white border-2 border-gray-100 rounded-2xl p-6 hover:border-green-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute -top-3 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Entry-Level</div>
+                    <div class="text-center mb-4">
+                        <span class="text-4xl">🌱</span>
+                        <h3 class="font-poppins text-lg font-bold mt-2">Démarrage Rapide</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm text-center mb-4">Tunnel LEAD + Bot WhatsApp FAQ</p>
+                    <div class="text-center mb-4">
+                        <span class="text-gray-400 line-through text-lg">175 000 FCFA</span>
+                        <div class="font-poppins text-3xl font-bold text-green-600">120 000 FCFA</div>
+                        <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mt-2">Économie : 55 000 FCFA</span>
+                    </div>
+                    <a href="#contact" class="block text-center bg-green-600 text-white py-3 rounded-full font-semibold hover:bg-green-700 transition-all">
+                        Choisir ce pack
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION RÉALISATIONS / PORTFOLIO ==================== -->
+    <section id="realisations" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold mb-4">Mes <span class="text-primary">Réalisations</span></h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Quelques projets récents</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Projet 1 : Bot WhatsApp Clinique -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="0">
+                    <div class="h-48 bg-gradient-to-br from-whatsapp/20 to-green-100 flex items-center justify-center">
+                        <i class="fab fa-whatsapp text-6xl text-whatsapp"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs bg-whatsapp/10 text-whatsapp px-3 py-1 rounded-full font-semibold">Bot WhatsApp</span>
+                        <h3 class="font-poppins text-lg font-bold mt-3 mb-2">Bot WhatsApp Clinique</h3>
+                        <p class="text-gray-600 text-sm mb-4">Prise de RDV automatique et rappels pour une clinique à Dakar.</p>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Node.js</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">WhatsApp API</span>
+                        </div>
+                        <a href="#" class="text-primary font-semibold text-sm hover:underline">
+                            <i class="fas fa-external-link-alt mr-1"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet 2 : Tunnel de vente -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-secondary/20 to-pink-100 flex items-center justify-center">
+                        <i class="fas fa-bullseye text-6xl text-secondary"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs bg-secondary/10 text-secondary px-3 py-1 rounded-full font-semibold">Tunnel de Vente</span>
+                        <h3 class="font-poppins text-lg font-bold mt-3 mb-2">Tunnel "Formation Marketing"</h3>
+                        <p class="text-gray-600 text-sm mb-4">Landing page haute conversion pour une formation en ligne.</p>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">HTML</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">CSS</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">JS</span>
+                        </div>
+                        <a href="#" class="text-secondary font-semibold text-sm hover:underline">
+                            <i class="fas fa-external-link-alt mr-1"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet 3 : Site E-commerce -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-blue-100 flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-6xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-semibold">E-commerce</span>
+                        <h3 class="font-poppins text-lg font-bold mt-3 mb-2">Ma Boutique Sénégal</h3>
+                        <p class="text-gray-600 text-sm mb-4">Boutique en ligne avec paiement Wave et gestion des stocks.</p>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">React</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Node.js</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">MongoDB</span>
+                        </div>
+                        <a href="#" class="text-primary font-semibold text-sm hover:underline">
+                            <i class="fas fa-external-link-alt mr-1"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet 4 : Bonus -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-gradient-to-br from-yellow-100 to-orange-100 flex items-center justify-center">
+                        <i class="fas fa-robot text-6xl text-yellow-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full font-semibold">Bot WhatsApp</span>
+                        <h3 class="font-poppins text-lg font-bold mt-3 mb-2">Bot Salon de Coiffure</h3>
+                        <p class="text-gray-600 text-sm mb-4">Prise de RDV et gestion de disponibilités pour un salon.</p>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">WhatsApp</span>
+                        </div>
+                        <a href="#" class="text-primary font-semibold text-sm hover:underline">
+                            <i class="fas fa-external-link-alt mr-1"></i> Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION TÉMOIGNAGES ==================== -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold mb-4">Ce que disent mes <span class="text-primary">clients</span></h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">La satisfaction de mes clients est ma priorité</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Témoignage 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-poppins font-bold">Dr. Moussa Diop</h4>
+                            <p class="text-gray-500 text-sm">Directeur, Clinique Santé Plus</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic">"Grâce au bot WhatsApp, nous avons réduit les rendez-vous manqués de 60%. L'installation a été rapide et le support est excellent."</p>
+                </div>
+
+                <!-- Témoignage 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-secondary/20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-secondary text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-poppins font-bold">Fatou Koné</h4>
+                            <p class="text-gray-500 text-sm">Vendeuse, Boutique Mode Dakar</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic">"Mon tunnel de vente m'a permis de doubler mes ventes en 1 mois. Le dashboard est simple et je vois toutes mes commandes en temps réel."</p>
+                </div>
+
+                <!-- Témoignage 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-poppins font-bold">Ibrahima Sarr</h4>
+                            <p class="text-gray-500 text-sm">Fondateur, TechStart Sénégal</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic">"Le site e-commerce est professionnel et mes clients adorent pouvoir payer avec Wave. Je recommande vivement !"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION À PROPOS ==================== -->
+    <section id="apropos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image -->
+                <div class="flex justify-center" data-aos="fade-right">
+                    <div class="relative">
+                        <div class="w-72 h-72 md:w-80 md:h-80 bg-gradient-to-br from-primary to-purple-600 rounded-3xl"></div>
+                        <div class="absolute -bottom-6 -right-6 w-72 h-72 md:w-80 md:h-80 bg-white rounded-3xl shadow-xl flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fas fa-code text-5xl text-primary mb-4"></i>
+                                <p class="font-poppins font-bold text-lg">Développeur Web</p>
+                                <p class="text-gray-500 text-sm">& Expert Digital</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Texte -->
+                <div data-aos="fade-left">
+                    <h2 class="font-poppins text-3xl md:text-4xl font-bold mb-6">À Propos de <span class="text-primary">Moi</span></h2>
+                    <h3 class="font-poppins text-xl font-semibold mb-4 text-gray-700">Développeur Web & Expert Digital au Sénégal</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Je suis développeur passionné basé à Dakar. Je crée des solutions digitales sur mesure pour aider les entreprises sénégalaises à se digitaliser et à augmenter leurs ventes.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Avec une expertise en développement web, automatisation WhatsApp, et marketing digital, je vous accompagne de A à Z dans votre transformation digitale.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Mon objectif : vous fournir des outils professionnels, fiables et rentables, avec un support local et réactif.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center">
+                            <div class="font-poppins text-3xl font-bold text-primary" data-target="10">0</div>
+                            <div class="text-gray-500 text-sm">Projets réalisés</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-poppins text-3xl font-bold text-primary">100%</div>
+                            <div class="text-gray-500 text-sm">Clients satisfaits</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-poppins text-3xl font-bold text-primary">7j/7</div>
+                            <div class="text-gray-500 text-sm">Support réactif</div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="inline-flex items-center bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition-all transform hover:scale-105">
+                        <i class="fas fa-download mr-2"></i> Télécharger mon CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION CONTACT ==================== -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold mb-4">Prêt à digitaliser votre <span class="text-primary">business</span> ?</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Discutons de votre projet</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Formulaire -->
+                <div class="bg-gray-50 rounded-2xl p-8" data-aos="fade-right">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="nom">Nom complet *</label>
+                            <input type="text" id="nom" name="nom" required
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                placeholder="Votre nom complet">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="email">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                placeholder="votre@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="telephone">Téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" required
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                placeholder="+221 XX XXX XX XX">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="service">Service souhaité *</label>
+                            <select id="service" name="service" required
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white">
+                                <option value="">Choisir un service</option>
+                                <option value="Bot WhatsApp">Bot WhatsApp</option>
+                                <option value="Tunnel de vente">Tunnel de vente</option>
+                                <option value="Site e-commerce">Site e-commerce</option>
+                                <option value="Pack combiné">Pack combiné</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
+                                placeholder="Décrivez votre projet..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-primary text-white py-4 rounded-xl font-semibold hover:bg-primary/90 transition-all transform hover:scale-[1.02] shadow-lg shadow-primary/30">
+                            <i class="fas fa-paper-plane mr-2"></i> Envoyer ma demande
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Infos de contact -->
+                <div class="flex flex-col justify-center" data-aos="fade-left">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-poppins font-bold">Email</h4>
+                                <p class="text-gray-600">ton@email.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-poppins font-bold">Téléphone</h4>
+                                <p class="text-gray-600">+221 XX XXX XX XX</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-whatsapp/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-whatsapp text-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-poppins font-bold">WhatsApp</h4>
+                                <a href="https://wa.me/221XXXXXXXXX" target="_blank" class="text-whatsapp hover:underline font-semibold">
+                                    Discuter sur WhatsApp <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-poppins font-bold">Localisation</h4>
+                                <p class="text-gray-600">Dakar, Sénégal</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-poppins font-bold">Disponibilité</h4>
+                                <p class="text-gray-600">Lun-Sam, 9h-20h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Logo & Description -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-bolt text-white text-lg"></i>
+                        </div>
+                        <span class="font-poppins font-bold text-xl">Digital Sénégal</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-sm">
+                        Solutions digitales sur mesure pour les entreprises sénégalaises. Bots WhatsApp, tunnels de vente, sites e-commerce.
+                    </p>
+                </div>
+
+                <!-- Liens rapides -->
+                <div>
+                    <h4 class="font-poppins font-bold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#realisations" class="text-gray-400 hover:text-white transition-colors">Réalisations</a></li>
+                        <li><a href="#tarifs" class="text-gray-400 hover:text-white transition-colors">Tarifs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Réseaux sociaux -->
+                <div>
+                    <h4 class="font-poppins font-bold mb-4">Suivez-moi</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-pink-500 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/221XXXXXXXXX" target="_blank" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-whatsapp transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2026 Digital Sénégal. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== BOUTON WHATSAPP FLOTTANT ==================== -->
+    <a href="https://wa.me/221XXXXXXXXX" target="_blank" id="whatsappFloat" class="fixed bottom-6 right-6 w-16 h-16 bg-whatsapp rounded-full flex items-center justify-center shadow-lg shadow-whatsapp/40 hover:scale-110 transition-transform z-50 whatsapp-pulse">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
