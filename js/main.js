@@ -115,7 +115,7 @@ contactForm.addEventListener('submit', function (e) {
 💬 Message : ${message || 'Aucun message supplémentaire'}`;
 
     const encodedText = encodeURIComponent(whatsappMessage);
-    const whatsappUrl = `https://wa.me/221XXXXXXXXX?text=${encodedText}`;
+    const whatsappUrl = `https://wa.me/221785220081?text=${encodedText}`;
 
     // Ouvrir WhatsApp
     window.open(whatsappUrl, '_blank');
